@@ -2,6 +2,62 @@ header {
 	position: fixed;
 }
 
+body {
+    background-color: #fff;
+    color: #2e2e33;
+}
+
+div {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    display: block;
+}
+
+.Page {
+    background: linear-gradient(180deg,#fff 73%,#f6f6f6 85%,#f6f6f6);
+}
+
+#content {
+    min-height: calc(100% - 72px - 321px);
+}
+
+.Page2 {
+    background-color: white;
+    padding-top: 200px;
+}
+
+.Menu {
+    margin-top: 24px;
+    width: 1300px;
+}
+
+.Products {
+
+}
+
+.Topic {
+    margin-bottom: 32;
+}
+
+.Name_of_topic {
+    padding: 0 16px;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+.In_topic {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
 .topNubex {
 	position: fixed;
 	right: 45px;
@@ -15,7 +71,7 @@ header {
 #Button {
   display: inline-block;
   padding: 15px 25px;
-  font-size: 24px;
+  font-size: 18px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -39,20 +95,20 @@ header {
 
 
 .Login {
-	margin-left: 1200px;
+	margin-left: 1000px;
 }
 
 #Busket {
-	width: 500px;
+	width: 400px;
 	height: 870px;
-	margin-left: 1400px;
+	margin-left: 1100px;
 	margin-top: 490px;
 	/* background-color: gray; */
 	position: fixed;
 }
 
 #BtnTop {
-    /* display: none; */
+    display: none;
     position: fixed; 
     bottom: 20px; 
     right: 30px; 
@@ -64,9 +120,38 @@ header {
     cursor: pointer; 
     padding: 15px; 
     border-radius: 10px; 
-    font-size: 18px; 
+    font-size: 18px;
 }
 
 #BtnTop:hover {
     background-color: #555; 
+}
+
+.Product {
+    background-color: #f6f6f6;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    font-size: 12px;
+    line-height: 16px;
+    border-left: 3px solid transparent;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.Product_img {
+    max-width: 300px;
+    min-width: 300px;
+    height: 300px;
+    border-radius: 4px;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Product_imd_hidden {
+    display: none;
 }
