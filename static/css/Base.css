@@ -15,6 +15,13 @@ ul {
     list-style: none;
 }
 
+button {
+    -webkit-background-clip: padding-box;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
 section {
     display: block;
 }
@@ -27,9 +34,15 @@ section {
     min-height: calc(100% - 72px - 321px);
 }
 
+.Cap {
+    width: 1115px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .Page2 {
     background-color: white;
-    padding-top: 200px;
 }
 
 .Menu {
@@ -58,6 +71,151 @@ section {
     margin-top: 24px;
 }
 
+.Product {
+    background-color: #f6f6f6;
+    padding: 10px;
+    width: 320px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    font-size: 12px;
+    line-height: 16px;
+    border-left: 3px solid transparent;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.Product:hover .TexttText1 {
+    display: none;
+}
+
+.Product:hover .TexttText2 {
+    display: block;
+}
+
+.Product:hover .BtnToBasket {
+    display: block;
+}
+
+.Product_img {
+    max-width: 300px;
+    min-width: 300px;
+    height: 300px;
+    border-radius: 4px;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Product_imd_hidden {
+    display: none;
+}
+
+.Description {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+    flex-grow: 1;
+}
+
+.Information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: all .2s ease;
+}
+
+.Text {
+    color: #2e2e33;
+    list-style: none;
+    font-size: 12px;
+    line-height: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+.Textt {
+    color: #2e2e33;
+    list-style: none;
+    font-size: 12px;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+#TexttTitle {
+    color: #2e2e33;
+    list-style: none;
+    font-size: 15px;
+    line-height: 16px;
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+
+.TexttText1 {
+    list-style: none;
+    line-height: 16px;
+    cursor: pointer;
+    color: #919399;
+    font-size: 0;
+    display: block;
+}
+
+.TexttText2 {
+    list-style: none;
+    line-height: 16px;
+    cursor: pointer;
+    color: #919399;
+    font-size: 0;
+    display: none;
+}
+
+.TexttTextInfo {
+    list-style: none;
+    cursor: pointer;
+    color: #919399;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.Adding {
+    justify-content: space-between;
+    line-height: 32px;
+    padding: 0 16px 16px;
+    box-sizing: border-box;
+}
+
+.Cost {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    margin-right: 8px;
+    margin-top: 30px;
+}
+
+.BtnToBasket {
+    width: 128px;
+    display: none;
+    background-color: #0ec645;
+    color: #fff;
+    height: 32px;
+    padding: 0 16px;
+    line-height: 32px;
+    border-radius: 4px;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    font-size: 15px;
+    margin-left: 130px;
+}
+
 .topNubex {
 	position: fixed;
 	right: 45px;
@@ -69,9 +227,7 @@ section {
 }
 
 #Button {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -95,15 +251,20 @@ section {
 
 
 .Login {
+    padding: 15px 25px;
 	margin-left: 1000px;
 }
 
-#Busket {
+.Logout {
+  padding: 15px 25px;
+}
+
+#Basket {
+    font-size: 15px;
 	width: 400px;
 	height: 870px;
 	margin-left: 1100px;
-	margin-top: 490px;
-	/* background-color: gray; */
+	margin-top: 475px;
 	position: fixed;
 }
 
@@ -127,31 +288,17 @@ section {
     background-color: #555; 
 }
 
-.Product {
-    background-color: #f6f6f6;
-    padding: 30px;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-    font-size: 12px;
-    line-height: 16px;
-    border-left: 3px solid transparent;
-    margin-bottom: 8px;
-    cursor: pointer;
-}
-
-.Product_img {
-    max-width: 300px;
-    min-width: 300px;
-    height: 300px;
-    border-radius: 4px;
-    background-position: 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.Product_imd_hidden {
-    display: none;
+.scrollup {
+  position: fixed; /* фиксированная позиция */
+  color: white; /* цвет текста */
+  background-color: green; /* цвет заднего фона */
+  right: 400px; /* расстояние от правого края */
+  bottom: 10px; /* расстояние от нижнего края */
+  padding: 4px 10px; /* отступы до содержимого блока */
+  font-size: 20px; /* размер шрифта (иконки) */
+  border-top-left-radius: 4px; /* скругление верхнего левого угла */
+  border-top-right-radius: 4px; /* скругление верхнего правого угла */
+  cursor: pointer; /* форма курсора */
+  display: block; /* не отображать элемент */
+  text-align: center; /*выравнивание содержимого элемента по центру */
 }
